@@ -1,0 +1,20 @@
+{
+  "name": "hapi-linvodb",
+  "version": "1.0.0",
+  "description": "Hapi plugin for using linvodb3",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokenx/hapi-linvodb.git"
+  },
+  "keywords": [],
+  "author": "Mikhail Delport",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lokenx/hapi-linvodb/issues"
+  },
+  "homepage": "https://github.com/lokenx/hapi-linvodb#readme"
+}

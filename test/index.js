@@ -57,16 +57,15 @@ lab.experiment('Plugin Tests', () => {
       const db = Path.join(__dirname, '..', 'testlinvodb.1');
       expect(err).to.not.exist();
       expect(FS.accessSync(db, FS.F_OK)).to.not.exist();
-
-      const files_after = FS.readdirSync(Path.join(__dirname, '..'));
-      console.info('\n Files in dir before:\n', files_after);
-
       done();
     });
   });
 
   lab.test('Successfully access plugin exposed objects and methods', (done) => {
 
+    const files_after = FS.readdirSync(Path.join(__dirname, '..'));
+    console.info('\n Files in dir before:\n', files_after);
+    
     server.connection();
     server.register({
       register: require('../'),

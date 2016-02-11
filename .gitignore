@@ -1,3 +1,4 @@
 testlinvodb.*
 
 node_modules
+coverage/

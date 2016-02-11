@@ -4,7 +4,8 @@
   "description": "Hapi plugin for using linvodb3",
   "main": "lib/index.js",
   "scripts": {
-    "test": "lab -a code -t 100 -L"
+    "test": "lab -a code -t 100 -L",
+    "coverage": "lab -a code -r lcov -o coverage/lcov.info"
   },
   "repository": {
     "type": "git",

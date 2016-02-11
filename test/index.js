@@ -51,6 +51,9 @@ lab.experiment('Plugin Tests', () => {
       }
     }, (err) => {
 
+      const files = FS.readdirSync(Path.join(__dirname, '..'));
+      console.info('\n Files in dir:\n', files);
+
       const db = Path.join(__dirname, '..', 'testlinvodb.1');
       expect(err).to.not.exist();
       expect(FS.accessSync(db, FS.F_OK)).to.not.exist();

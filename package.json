@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "lab -a code -t 100 -L",
-    "coverage": "lab -a code -r lcov -o coverage/lcov.info"
+    "coverage": "lab -a code -r lcov -o coverage/lcov.info",
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",

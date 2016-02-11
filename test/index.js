@@ -54,10 +54,13 @@ lab.experiment('Plugin Tests', () => {
       const files_before = FS.readdirSync(Path.join(__dirname, '..'));
       console.info('\n Files in dir before:\n', files_before);
 
-      const db = Path.join(__dirname, '..', 'testlinvodb.1');
-      expect(err).to.not.exist();
-      expect(FS.accessSync(db, FS.F_OK)).to.not.exist();
-      done();
+      // Attempt to get tets to pass on Travis
+      setTimeout(function () {
+        const db = Path.join(__dirname, '..', 'testlinvodb.1');
+        expect(err).to.not.exist();
+        expect(FS.accessSync(db, FS.F_OK)).to.not.exist();
+        done();
+      }, 100);
     });
   });
 

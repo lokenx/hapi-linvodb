@@ -4,7 +4,7 @@
   "description": "Hapi plugin for using linvodb3",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab -a code -t 100 -L"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,18 @@
   "bugs": {
     "url": "https://github.com/lokenx/hapi-linvodb/issues"
   },
-  "homepage": "https://github.com/lokenx/hapi-linvodb#readme"
+  "homepage": "https://github.com/lokenx/hapi-linvodb#readme",
+  "dependencies": {
+    "hoek": "^3.0.4",
+    "joi": "^7.2.3",
+    "leveldown": "^1.4.4",
+    "linvodb3": "^3.13.0"
+  },
+  "devDependencies": {
+    "code": "^2.1.0",
+    "codecov": "^1.0.1",
+    "hapi": "^13.0.0",
+    "lab": "^8.2.0",
+    "trash": "^3.4.1"
+  }
 }

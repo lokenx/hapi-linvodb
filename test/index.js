@@ -51,11 +51,9 @@ lab.experiment('Plugin Tests', () => {
       }
     }, (err) => {
 
-      const files_before = FS.readdirSync(Path.join(__dirname, '..'));
-      console.info('\n Files in dir before:\n', files_before);
-
       // Attempt to get tets to pass on Travis
-      setTimeout(function () {
+      setTimeout(() => {
+
         const db = Path.join(__dirname, '..', 'testlinvodb.1');
         expect(err).to.not.exist();
         expect(FS.accessSync(db, FS.F_OK)).to.not.exist();
@@ -65,9 +63,6 @@ lab.experiment('Plugin Tests', () => {
   });
 
   lab.test('Successfully access plugin exposed objects and methods', (done) => {
-
-    const files_after = FS.readdirSync(Path.join(__dirname, '..'));
-    console.info('\n Files in dir after:\n', files_after);
 
     server.connection();
     server.register({

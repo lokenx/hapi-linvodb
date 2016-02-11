@@ -10,7 +10,7 @@ npm install hapi-linvodb
 
 # Usage
 
-```
+```js
 'use strict';
 
 const Hapi = require('hapi');

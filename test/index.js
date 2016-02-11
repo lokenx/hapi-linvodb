@@ -21,6 +21,11 @@ lab.experiment('Plugin Tests', () => {
     done();
   });
 
+  lab.afterEach((done) => {
+
+    Trash(['./testlinvo.db']).then(done());
+  });
+
   lab.test('Rejection of invalid options', (done) => {
 
     const register = () => {
@@ -177,11 +182,6 @@ lab.experiment('Plugin Tests', () => {
       });
     });
 
-  });
-
-  lab.afterEach((done) => {
-
-    Trash(['./testlinvo.db']).then(done());
   });
 
 });

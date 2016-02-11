@@ -4,8 +4,6 @@ const Hapi = require('hapi');
 const Lab = require('lab');
 const Code = require('code');
 const FS = require('fs');
-const Path = require('path');
-const Trash = require('trash');
 
 const internals = {};
 
@@ -20,16 +18,6 @@ lab.experiment('Plugin Tests', () => {
 
     server = new Hapi.Server();
     done();
-  });
-
-  lab.afterEach((done) => {
-
-    const db = Path.join(__dirname, '..', 'testlinvo.db');
-    Trash([db]).then(done()).catch((err) => {
-
-      console.error(err);
-      done();
-    });
   });
 
   lab.test('Rejection of invalid options', (done) => {
@@ -57,13 +45,13 @@ lab.experiment('Plugin Tests', () => {
       register: require('../'),
       options: {
         modelName: 'test',
-        filename: 'testlinvo.db',
+        filename: 'testlinvodb.1',
         schema: {}
       }
     }, (err) => {
 
       expect(err).to.not.exist();
-      expect(FS.accessSync('./testlinvo.db', FS.F_OK)).to.not.exist();
+      expect(FS.accessSync('./testlinvodb.1', FS.F_OK)).to.not.exist();
       done();
     });
   });
@@ -75,7 +63,7 @@ lab.experiment('Plugin Tests', () => {
       register: require('../'),
       options: {
         modelName: 'test',
-        filename: 'testlinvo.db',
+        filename: 'testlinvodb.2',
         schema: {}
       }
     }, (err) => {
@@ -90,7 +78,7 @@ lab.experiment('Plugin Tests', () => {
           const plugin = request.server.plugins['hapi-linvodb'];
 
           expect(plugin.db.modelName).to.equal('test');
-          expect(plugin.db.filename).to.equal('testlinvo.db');
+          expect(plugin.db.filename).to.equal('testlinvodb.2');
 
           plugin.db.insert({ a: 1 }, (err, doc) => {
 
@@ -124,7 +112,7 @@ lab.experiment('Plugin Tests', () => {
       register: require('../'),
       options: {
         modelName: 'test',
-        filename: 'testlinvo.db',
+        filename: 'testlinvodb.3',
         schema: {
           name: {
             type: String,

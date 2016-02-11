@@ -1,6 +1,6 @@
 {
   "name": "hapi-linvodb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hapi plugin for using linvodb3",
   "main": "lib/index.js",
   "scripts": {
@@ -28,7 +28,6 @@
     "codecov": "^1.0.1",
     "eslint-config-hapi": "^8.0.1",
     "hapi": "^13.0.0",
-    "lab": "^8.2.0",
-    "trash": "^3.4.1"
+    "lab": "^8.2.0"
   }
 }

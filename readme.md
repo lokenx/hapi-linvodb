@@ -1,4 +1,4 @@
-# hapi-linvodb [![Build Status](https://travis-ci.org/lokenx/hapi-linvodb.svg?branch=master)](https://travis-ci.org/lokenx/hapi-linvodb) [![codecov.io](https://codecov.io/github/lokenx/hapi-linvodb/coverage.svg?branch=master)](https://codecov.io/github/lokenx/hapi-linvodb?branch=master)
+# hapi-linvodb [![Build Status](https://travis-ci.org/lokenx/hapi-linvodb.svg?branch=master)](https://travis-ci.org/lokenx/hapi-linvodb) [![codecov.io](https://codecov.io/github/lokenx/hapi-linvodb/coverage.svg?branch=master)](https://codecov.io/github/lokenx/hapi-linvodb?branch=master) [![npm version](https://badge.fury.io/js/hapi-linvodb.svg)](https://badge.fury.io/js/hapi-linvodb)
 
 Simple [Hapi](http://hapijs.com/) plugin for [linvodb3](https://github.com/Ivshti/linvodb3)
 

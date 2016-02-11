@@ -4,6 +4,7 @@ const Hapi = require('hapi');
 const Lab = require('lab');
 const Code = require('code');
 const FS = require('fs');
+const Path = require('path');
 const Trash = require('trash');
 
 const internals = {};
@@ -23,7 +24,12 @@ lab.experiment('Plugin Tests', () => {
 
   lab.afterEach((done) => {
 
-    Trash(['./testlinvo.db']).then(done());
+    const db = Path.join(__dirname, '..', 'testlinvo.db');
+    Trash([db]).then(done()).catch((err) => {
+
+      console.error(err);
+      done();
+    });
   });
 
   lab.test('Rejection of invalid options', (done) => {

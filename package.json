@@ -26,6 +26,7 @@
   "devDependencies": {
     "code": "^2.1.0",
     "codecov": "^1.0.1",
+    "eslint-config-hapi": "^8.0.1",
     "hapi": "^13.0.0",
     "lab": "^8.2.0",
     "trash": "^3.4.1"

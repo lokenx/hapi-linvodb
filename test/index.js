@@ -64,8 +64,8 @@ lab.experiment('Plugin Tests', () => {
   lab.test('Successfully access plugin exposed objects and methods', (done) => {
 
     const files_after = FS.readdirSync(Path.join(__dirname, '..'));
-    console.info('\n Files in dir before:\n', files_after);
-    
+    console.info('\n Files in dir after:\n', files_after);
+
     server.connection();
     server.register({
       register: require('../'),

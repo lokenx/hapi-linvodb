@@ -4,6 +4,7 @@ const Hapi = require('hapi');
 const Lab = require('lab');
 const Code = require('code');
 const FS = require('fs');
+const Path = require('path');
 
 const internals = {};
 
@@ -50,8 +51,9 @@ lab.experiment('Plugin Tests', () => {
       }
     }, (err) => {
 
+      const db = Path.join(__dirname, '..', 'testlinvodb.1');
       expect(err).to.not.exist();
-      expect(FS.accessSync('./testlinvodb.1', FS.F_OK)).to.not.exist();
+      expect(FS.accessSync(db, FS.F_OK)).to.not.exist();
       done();
     });
   });
